@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NOVA - Your smart career and skill development platform.">
+    <title>NOVA | Build What's Next</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app-shell">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar" id="sidebar">
+
+            <a href="#" class="brand">
+                <span class="brand-mark">N</span>
+                <span>NOVA<span class="brand-dot">.</span></span>
+            </a>
+
+            <div class="workspace-label">WORKSPACE</div>
+
+            <nav class="main-nav">
+                <button class="nav-link active" data-view="overview">
+                    <span class="nav-icon">⌂</span>
+                    Overview
+                </button>
+
+                <button class="nav-link" data-view="career">
+                    <span class="nav-icon">◈</span>
+                    Career Roadmap
+                </button>
+
+                <button class="nav-link" data-view="assessment">
+                    <span class="nav-icon">✳</span>
+                    Skill Assessment
+                </button>
+
+                <button class="nav-link" data-view="opportunities">
+                    <span class="nav-icon">↗</span>
+                    Opportunities
+                </button>
+            </nav>
+
+            <div class="sidebar-bottom">
+
+                <div class="help-card">
+                    <div class="help-icon">✦</div>
+                    <strong>Keep moving forward</strong>
+                    <p>Small steps today create bigger opportunities tomorrow.</p>
+                </div>
+
+                <button class="nav-link" id="themeToggle">
+                    <span class="nav-icon">◐</span>
+                    Toggle appearance
+                </button>
+
+                <div class="profile-mini">
+                    <div class="avatar">FH</div>
+                    <div>
+                        <strong>Future Creator</strong>
+                        <small>Free workspace</small>
+                    </div>
+                </div>
+
+            </div>
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+
+            <header class="topbar">
+
+                <button class="mobile-menu" id="mobileMenu">
+                    ☰
+                </button>
+
+                <div class="breadcrumb">
+                    Workspace /
+                    <strong id="breadcrumbCurrent">Overview</strong>
+                </div>
+
+                <div class="top-actions">
+                    <span class="date-label" id="todayLabel"></span>
+
+                    <button class="icon-button" id="topTheme">
+                        ◐
+                    </button>
+
+                    <div class="avatar small">FH</div>
+                </div>
+
+            </header>
+
+
+            <!-- OVERVIEW PAGE -->
+            <section class="view active-view" id="overview">
+
+                <div class="welcome-row">
+
+                    <div>
+                        <div class="eyebrow">
+                            <span class="status-dot"></span>
+                            YOUR CAREER SPACE
+                        </div>
+
+                        <h1>Build what's <span>next.</span></h1>
+
+                        <p class="subtitle">
+                            A little progress every day adds up to something remarkable.
+                        </p>
+                    </div>
+
+                    <button class="primary-button" data-go="assessment">
+                        Start skill check →
+                    </button>
+
+                </div>
+
+
+                <!-- HERO SECTION -->
+                <div class="hero-card">
+
+                    <div class="hero-copy">
+
+                        <div class="hero-kicker">
+                            YOUR NEXT CHAPTER STARTS HERE
+                        </div>
+
+                        <h2>
+                            Turn your potential<br>
+                            into a <em>clear direction.</em>
+                        </h2>
+
+                        <p>
+                            Discover your strengths, set meaningful goals
+                            and take practical steps toward the career you want.
+                        </p>
+
+                        <button class="light-button" data-go="career">
+                            Explore my roadmap ↗
+                        </button>
+
+                    </div>
+
+                    <div class="hero-art">
+                        <div class="orbit orbit-one"></div>
+                        <div class="orbit orbit-two"></div>
+
+                        <div class="art-core">
+                            <span>✦</span>
+                            <small>GROW</small>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <!-- STATISTICS -->
+                <div class="section-heading">
+                    <div>
+                        <h2>Your progress at a glance</h2>
+                        <p>Track the actions moving you forward.</p>
+                    </div>
+                </div>
+
+                <div class="stats-grid">
+
+                    <article class="stat-card">
+                        <div class="stat-top">
+                            Career readiness
+                            <span class="stat-icon purple">◈</span>
+                        </div>
+                        <div class="stat-value" id="readinessValue">35%</div>
+                        <div class="progress-track">
+                            <div class="progress-fill" id="readinessBar"></div>
+                        </div>
+                        <small id="readinessNote">A strong start — keep building.</small>
+                    </article>
+
+                    <article class="stat-card">
+                        <div class="stat-top">
+                            Skills in progress
+                            <span class="stat-icon blue">✳</span>
+                        </div>
+                        <div class="stat-value" id="skillsValue">3</div>
+                        <small>Your learning journey is underway.</small>
+                    </article>
+
+                    <article class="stat-card">
+                        <div class="stat-top">
+                            Career goals
+                            <span class="stat-icon orange">◎</span>
+                        </div>
+                        <div class="stat-value" id="goalsValue">2</div>
+                        <small>Make your next move count.</small>
+                    </article>
+
+                    <article class="stat-card">
+                        <div class="stat-top">
+                            Weekly focus
+                            <span class="stat-icon green">⌁</span>
+                        </div>
+                        <div class="stat-value">4.5 hrs</div>
+                        <small>A sample weekly focus target.</small>
+                    </article>
+
+                </div>
+
+
+                <!-- RECOMMENDATIONS -->
+                <div class="content-grid">
+
+                    <article class="panel">
+
+                        <div class="panel-heading">
+                            <div>
+                                <h3>Recommended next steps</h3>
+                                <p>Simple actions. Real momentum.</p>
+                            </div>
+                        </div>
+
+                        <div class="step-list">
+
+                            <div class="step-item">
+                                <div class="step-number">01</div>
+                                <div class="step-copy">
+                                    <strong>Check your current skills</strong>
+                                    <small>Understand where you stand today.</small>
+                                </div>
+                                <button class="text-action" data-go="assessment">Begin →</button>
+                            </div>
+
+                            <div class="step-item">
+                                <div class="step-number">02</div>
+                                <div class="step-copy">
+                                    <strong>Set a clear career goal</strong>
+                                    <small>Choose a direction worth working toward.</small>
+                                </div>
+                                <button class="text-action" data-go="career">Set goal →</button>
+                            </div>
+
+                            <div class="step-item">
+                                <div class="step-number">03</div>
+                                <div class="step-copy">
+                                    <strong>Explore opportunities</strong>
+                                    <small>Find roles that match your interests.</small>
+                                </div>
+                                <button class="text-action" data-go="opportunities">Explore →</button>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="panel">
+                        <div class="panel-heading">
+                            <div>
+                                <h3>My focus areas</h3>
+                                <p>Keep your priorities visible.</p>
+                            </div>
+                        </div>
+
+                        <div class="focus-chip-list">
+                            <span class="focus-chip">Frontend development</span>
+                            <span class="focus-chip">Communication</span>
+                            <span class="focus-chip">Portfolio building</span>
+                        </div>
+
+                        <div class="quote-box">
+                            Small steps create big changes.
+                            <small>Keep learning. Keep growing.</small>
+                        </div>
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- CAREER PAGE -->
+            <section class="view" id="career">
+
+                <div class="page-intro">
+                    <div class="eyebrow">PLAN WITH PURPOSE</div>
+                    <h1>Your career <span>roadmap.</span></h1>
+                    <p class="subtitle">
+                        Turn a big ambition into achievable milestones.
+                    </p>
+                </div>
+
+                <div class="roadmap-banner">
+                    <div>
+                        <h2>Progress over perfection.</h2>
+                        <p>Choose a goal and build the habits that bring it closer.</p>
+                    </div>
+                    <div class="roadmap-symbol">✧</div>
+                </div>
+
+                <div class="section-heading">
+                    <div>
+                        <h2>Your milestones</h2>
+                        <p>Tick off milestones as you complete them.</p>
+                    </div>
+
+                    <button class="outline-button" id="resetGoals">
+                        Reset sample goals
+                    </button>
+                </div>
+
+                <div class="milestone-list" id="milestoneList"></div>
+
+                <div class="add-goal-row">
+                    <input id="goalInput" type="text" placeholder="Add a new milestone...">
+                    <button class="primary-button" id="addGoal">
+                        Add milestone +
+                    </button>
+                </div>
+
+            </section>
+
+
+            <!-- ASSESSMENT PAGE -->
+            <section class="view" id="assessment">
+
+                <div class="page-intro">
+                    <div class="eyebrow">KNOW YOUR STRENGTHS</div>
+                    <h1>Skill <span>assessment.</span></h1>
+                    <p class="subtitle">
+                        Rate your current confidence in each skill.
+                    </p>
+                </div>
+
+                <div class="assessment-layout">
+
+                    <article class="panel assessment-panel">
+                        <div class="panel-heading">
+                            <div>
+                                <h3>How confident are you?</h3>
+                                <p>Choose your current skill level.</p>
+                            </div>
+                        </div>
+
+                        <div id="skillQuestions" class="skill-questions"></div>
+
+                        <button class="primary-button full-button" id="saveAssessment">
+                            Save my assessment →
+                        </button>
+
+                        <p class="form-hint" id="assessmentMessage">
+                            Your results stay in this browser.
+                        </p>
+                    </article>
+
+                    <aside class="panel score-panel">
+                        <div class="score-orb">
+                            <div>
+                                <strong id="skillScore">--</strong>
+                                <small>YOUR SCORE</small>
+                            </div>
+                        </div>
+
+                        <h3>Your skill snapshot</h3>
+                        <p>Complete your assessment to see your self-rated skill level.</p>
+                    </aside>
+
+                </div>
+
+            </section>
+
+
+            <!-- OPPORTUNITIES PAGE -->
+            <section class="view" id="opportunities">
+
+                <div class="page-intro">
+                    <div class="eyebrow">TAKE THE NEXT STEP</div>
+                    <h1>Explore <span>opportunities.</span></h1>
+                    <p class="subtitle">
+                        Discover example roles and the skills they require.
+                    </p>
+                </div>
+
+                <div class="opportunity-tools">
+                    <div class="search-wrap">
+                        <span>⌕</span>
+                        <input id="jobSearch" type="search" placeholder="Search roles or skills...">
+                    </div>
+
+                    <select id="jobType">
+                        <option value="all">All role types</option>
+                        <option value="Internship">Internship</option>
+                        <option value="Entry-level">Entry-level</option>
+                        <option value="Remote">Remote-friendly</option>
+                    </select>
+                </div>
+
+                <p class="opportunity-note">
+                    Illustrative career paths — not verified live vacancies.
+                </p>
+
+                <div class="job-grid" id="jobGrid"></div>
+
+            </section>
+
+
+            <footer class="footer">
+                <span>© 2026 NOVA. Built for the next generation.</span>
+                <span>Learn. Build. Become. ✦
+                    Made by Fatima5 | Just for Internship purpose
+                </span>
+            </footer>
+
+        </main>
+
+    </div>
+
+    <div class="toast" id="toast" role="status"></div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
